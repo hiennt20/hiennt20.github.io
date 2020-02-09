@@ -1,0 +1,7 @@
+
+img{max-with: 300px}
+a{text-decoration: none;}	
+a:visited{ color: grey; }
+a:link{color: black;}
+a:hover{ color: blue; }
+a:active{ color: green; }
