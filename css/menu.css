@@ -13,6 +13,7 @@ a {
     text-decoration: none;
     background-color: transparent;
 }
+/* jhjfh */
 #header {
     background-color: #34465c;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -25,7 +26,6 @@ a {
     margin-left: auto;
 }
 .parent-menu.desktop {
-    height: 100%;
     flex: initial;
 }
 .parent-menu.desktop .list-menu {
@@ -57,7 +57,7 @@ a {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
-
+background: green;
 }
 body {
     font-family: 'Roboto', sans-serif;
