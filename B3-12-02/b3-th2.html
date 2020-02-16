@@ -3,45 +3,79 @@
 <head>
 	<title>bai tap thuc hanh 2</title>
 	<style>
+		
+		/* body {
+			width: 1000px;
+			margin: auto;
+		} */
+		* {
+			box-sizing: border-box;
+		}
 		.box {
+
 			/* display: flex;
 			align-items: center;
 			justify-content: center; */
+			/* padding: 15px; */
 			color: white;
 			font-size: 50px;
+		/* 	max-width: 1000px; */
+			margin: auto;
 
 		}
-		.box.height400 {
-			text-align: center;
+		.box1 {
+			padding: 150px;	
 			color: white;
 			float: left;
 			height: 400px;
 			background: red;
 			width: 60%;
+			border: 0;
+			border-right: 15px;
+			border-style: solid;
+			border-color: white;
 		}
-		.box.height200-1 {
+		.box23 {
+			box-sizing: border-box;
+			width: 40%;
+			float: left;
+			border: 0;
+			border-left: 15px;
+			border-style: solid;
+			border-color: white;
+
+		} 
+		.box2 {
+			padding: 65px;
 			float: left;
 			height: 200px;
 			background: green;
-			width: 40%
+			/* width: 40% */
+			
 		}
-		.box.height200-2{
+		.box3{
+			padding: 65px;
 			height: 200px;
 			background: blue;
 			float: left;
-			width: 40%
+			/* width: 40% */
 		}
+		
 	</style>
 </head>
 <body>
-	<div class="box height400">
-		height 400px
+	<div class="box">
+		<div class="box1">
+			height 400px
+		</div>
+		<div class="box23">
+			<div class="box2">
+				height 200px	
+			</div>
+			<div class="box3">
+				height 200px
+			</div>
+		</div>
 	</div>
-		<div class="box height200-1">
-			height 200px	
-		</div>
-		<div class="box height200-2">
-			height 200px
-		</div>
 </body>
 </html>

@@ -1,0 +1,22 @@
+body {
+	margin: 0;
+}
+a {
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+
+}
+img {
+	max-width: 1000px;
+}
+.wrap {
+	margin: auto;
+}
+.box {
+	width: 33.33%;
+	float: left;
+}
+.main {
+	float: left;
+}
