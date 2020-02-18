@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bai tap thuc hanh 2</title>
+	<style>
+		body {
+			max-width: 1000px;
+			margin: auto;
+		}
+		h1 {
+			text-align: center;
+			text-transform: uppercase;
+			background-color: #ff6a00b8;
+		}
+		/* img {
+
+			max-width: 100%;
+		} */
+		*{
+			box-sizing:border-box;
+		}
+		.grid {
+			margin-top: 50px;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 5px; 
+			text-align: center; 
+
+		}
+		.anime {
+			border: 5px solid #ff6a00b8;
+			transition: 1s;
+			overflow: hidden;
+
+		}
+		
+		.anime >img {
+			width: 100%;
+		}
+		.anime:hover img {
+			transform: scale(1.2);
+		}
+	</style>
+</head>
+<body>
+	<h1>anh anime</h1>
+	<div class="grid">
+		<div class="anime">
+			<img src="../images/anime1.jpg" alt="">
+		</div>
+		<div class="anime">
+			<img src="../images/anime2.jpg" alt="">
+		</div>
+		<div class="anime">
+			<img src="../images/anime3.jpg" alt="">
+		</div>
+		<div class="anime">
+			<img src="../images/anime4.jpg" alt="">
+		</div>
+		<div class="anime">
+			<img src="../images/anime5.jpg" alt="">
+		</div>
+		<div class="anime">
+			<img src="../images/anime6.jpg" alt="">
+		</div>
+		<div class="anime">
+			<img src="../images/anime7.jpg" alt="">
+		</div>
+		<div class="anime">
+			<img src="../images/anime8.jpg" alt="">
+		</div>
+		<div class="anime">
+			<img src="../images/anime9.jpg" alt="">
+		</div>
+	</div>
+</body>
+</html>

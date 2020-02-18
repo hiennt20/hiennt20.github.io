@@ -5,6 +5,9 @@
 img {
 	max-width: 200px;
 }
+.box a {
+	text-align: center;
+}
 a{text-decoration: none;}	
 a:visited{ color: grey; }
 a:link{color: black;}
