@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>động thực vật học</title>
+	<style>
+		body {
+			margin: 0;
+			font-size: 15px;
+			text-transform: capitalize;
+
+		}
+		h1 {
+			text-align: center;
+			padding: 20px;
+
+		}
+		.grid {
+			display: grid;
+			text-align: center;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 15px;
+
+		}
+		.box {
+			width: 100%;
+			background: white;
+			padding: 5px;
+			
+		}
+		img {
+			max-width: 100%;
+			transition: 1s;
+		}
+		
+		a {
+			text-decoration: none;
+		}
+		a:visited{ color: grey; }
+		a:link{color: black;}
+		a:hover{ color: blue; }
+		a:active{ color: green; } 
+		.box > a > img:hover {
+			transform: scale(1.2);
+		}
+	</style>
+</head>
+<body>
+	<h1>nghiên cứu một số loài động vật</h1>
+	<div class="grid">
+		<div class="box anh1">
+			<a href="con-gau.html"><img src="../images/gau.jpg" alt="con gấu"></a>
+			<br/>
+			<a href="con-gau.html"><p>con gấu</p></a>
+		</div>
+		<div class="box anh2">
+			<a href="con-rua.html"><img src="../images/rua.jpg" alt="con rùa"></a>
+			<br/>
+			<a href="con-rua.html"><p>con rùa</p></a>
+		</div>
+		<div class="box anh3">
+			<a href="hai-cau.html"><img src="../images/hai-cau.jpg" alt="con hải cẩu"></a>
+		</br>
+		<a href="hai-cau.html"><p>con hải cẩu</p></a>
+	</div>
+	<div class="box anh4">
+		<a href="con-ho.html"><img src="../images/ho.jpg" alt="con hổ"></a>
+		<br/>
+		<a href="con-ho.html"><p>con hổ</p></a>
+	</div>
+	<div class="box anh5">
+		<a href="te-giac.html"><img src="../images/tegiac.jpg" alt="con tê giác"></a>
+		<br/>
+		<a href="te-giac"><p>con tê giác</p></a>
+	</div>
+	<div class="box anh6">
+		<a href="bo-cap.html"><img src="../images/bocap.jpg" alt="con bọ cạp"></a>
+		<br/>
+		<a href="bo-cap.html"><p>con bọ cạp</p></a>
+	</div>
+</div>
+
+</body>
+</html>

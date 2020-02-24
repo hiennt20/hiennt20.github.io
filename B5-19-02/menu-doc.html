@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>menu zing mp3 doc</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../css/B5-menu-ngang.css">		 -->
+	<style>
+		body {
+			font-family: Roboto,sans-serif;
+			/* text-transform: uppercase; */
+			background: #3a3d320f;
+			font-size: 14px;
+			font-weight: 500;
+			color: #757575;
+			margin: 0;
+		}
+		* {
+			box-sizing: border-box;
+		}
+		a {color: #32323d;
+			padding: 15px;
+			display: block;
+			text-decoration: none;
+		}
+		ul {
+			padding-left: 0;
+			list-style-type: none;
+			background: blue;
+		}
+		.main-level1 {
+			position: relative;
+			box-shadow: 0 0 2px 0 rgba(0,0,0,.25);
+			background-color: #fff;
+			width: 200px;
+    height: 344px;
+		}
+		.main-level2-1,.main-level2-2 {
+			position: absolute;
+			display: none;
+			background-color: #fff;
+			width: 200px;
+    		height: 344px;
+    		box-shadow: 0 5px 2px 0 rgba(0,0,0,.25);
+		}
+		.main-level2-1 {
+			top: 123px;
+			left: 70px;
+		}
+		.main-level2-2 {
+			top: 165px;
+			left: 57px;
+		}
+
+		.main-level1 > li:hover .main-level2-1 {
+			background: blue;
+		display: block;	
+		}
+		.main-level1 > li:hover .main-level2-2 {
+			background: green;
+		display: block;	
+		}
+		.menu-title {
+			padding: 10px;
+			font-weight: bold;
+		}
+		/* .main-level1:hover .main-level2-1, .main-level2-2 {
+			display: block;
+		} */
+
+	</style>
+</head>
+<body>
+	<ul class="main-level1">
+		<li><a href="">trang chủ</a></li>
+		<li><a href="">mới phát hành</a></li>
+		<li><a href="">top 100</a>
+			<ul class="main-level2-1">
+				<li><span class="menu-title">viet nam</span>
+					<ul>
+						<li><a href="">nhạc trẻ</a></li>
+						<li><a href="">nhạc trữ tình</a></li>
+						<li><a href="">nhạc quê hương</a></li>
+						<li><a href="">nhạc cách mạng</a></li>
+						<li><a href="">rap/hiphop việt</a></li>
+					</ul>
+				</li>
+				<li><span class="menu-title">âu mỹ</span>
+					<ul>
+						<li><a href="">rock</a></li>
+						<li><a href="">pop</a></li>
+						<li><a href="">country</a></li>
+						<li><a href="">electronic/dance</a></li>
+						<li><a href="">audiophile</a></li>
+					</ul>
+				</li>
+				<li><span class="menu-title">châu á</span>
+					<ul>
+						<li><a href="">hàn quốc</a></li>
+						<li><a href="">nhật bản</a></li>
+						<li><a href="">hoa ngữ</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="">chủ đề</a>
+			<ul class="main-level2-2">
+				<li><span class="menu-title">đề xuất</span>
+					<ul>
+						<li><a href="">nhạc hot</a></li>
+						<li><a href="">những bài hit</a></li>
+						<li><a href="">những bài bất hủ</a></li>
+					</ul>
+				</li>
+				<li><span class="menu-title">thể loại</span>
+					<ul>
+						<li><a href="">edm</a></li>
+						<li><a href="">acoustic</a></li>
+						<li><a href="">indie</a></li>
+						<li><a href="">nhạc không lời</a></li>
+					</ul>
+				</li>
+				<li><span class="menu-title">tâm trạng</span></li>
+				<li><span class="menu-title">hoạt động</span></li>
+			</ul>
+		</li>
+		<li><a href="">nhạc cá nhân</a></li>
+
+	</ul>
+</body>
+</html>

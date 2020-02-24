@@ -3,16 +3,96 @@
 <head>
 	<title>bai thuc hanh 4</title>
 	<style>
-		.box {
-			color: white;
+		body {
 			font-family: arial;
-			font-size: 50px;
+			font-size: 20px;
 			text-transform: uppercase;
+			color: white;
+
+		}
+		.box {
+			
+			position: relative;
+			height: 200px;
+			width: 200px;
+			background: grey;
 			/* text-align: center; */
 		}
-
+		.start, .today {
+			position: absolute;
+			color: white;
 			
-		.box1 {
+
+		}
+		.start {
+			top: 95px;
+    		left: 70px;
+		}
+		.today {
+			    top: 159px;
+   				 left: 58px;
+	
+		}
+		.wrap {
+			position: relative;
+			top: 130px;
+    		left: 58px;
+
+		}
+		.learning, .coding, .teaching {
+			position: absolute;
+			top: 0px;
+			left: 0px;	
+		/* 	display: none; */
+		}
+		@keyframes learning {
+			from {
+				opacity: 0;background: blue;top:-28px;left: 0px;}
+			to {
+				opacity: 1;background: green;top:0px;left:0px;}
+		}
+		@keyframes teaching {
+
+			from {opacity: 0;
+				top:30px;left: 0px;}
+			to {opacity: 1;
+				top:0px;left:0px;}
+		}
+		@keyframes coding {
+			from {opacity: 0;
+				top:0px;left: 0px;}
+			to {opacity: 1;
+				top:0px;left:0px;}
+		}
+		.learning {
+			background: green;
+			top: -28px;
+			animation: learning 0.5s ease /* infinite */;
+		animation-delay: 1s;
+		opacity: 0;
+		z-index: 2;
+			/* top: 130px;
+    		left: 58px; */
+		}
+		.coding {
+			background: blue;
+			animation: coding 0.5s ease /* infinite */;
+			z-index: 1;
+		/* 	display: none; */
+			/* top: 130px;
+    		left: 58px; */
+		}
+		.teaching {
+			background: red;
+			top: 30px;
+			animation: teaching 0.5s ease /* infinite */;
+			animation-delay: 2s;
+			opacity: 0;
+			z-index: 3;
+			/* top: 130px;
+    		left: 58px; */
+		}
+		/* .box1 {
 			position: relative;
 			color: grey;
 		}
@@ -21,31 +101,33 @@
 			width: 500px;
 			height: 250px;
 			position: absolute;
-			position: absolute;
-		/* 	background-color: green; */
+			position: absolute; */
+		/* 	background-color: green;
 			color: white;
 			/* animation: 10s box2 ease infinite; */
-		}
+	/* 	} */ */
 	</style>
 </head>
 <body>
-<div class=" box box1">
+<div class="box">
+<div class="start">
 	start
 </div>
-<div class="box box2">
-	<div>
-		learning 
+<div class="wrap">
+	<div class="learning">
+	learning	
 	</div>
-	<div>
-			coding
+	<div class="coding">
+	coding	
 	</div>
-	<div>
-			teaching 
+	<div class="teaching">
+	teaching
 	</div>
-	</ul>
-</div>
-<div class="box box1">
+	</div>
+<div class="today">
 	today
+</div>
+	
 </div>
 </body>
 </html>

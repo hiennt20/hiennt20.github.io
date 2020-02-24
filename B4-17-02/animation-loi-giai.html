@@ -1,0 +1,132 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Text</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			width: 300px;
+			padding: 15px;
+			background-color: #f1f1f1;
+			color: #484b4f;
+			line-height: 1.5;
+			font-size: 30px;
+			font-weight: bold;
+			font-family: 'Roboto', sans-serif;
+			text-align: center;
+		}
+
+		.middle-text {
+			position: relative;
+			overflow: hidden;
+			height: 45px;
+		}
+
+		.learning, .coding, .teaching {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			/* transform: translateX(-50%); */
+			color: #fff;
+			text-transform: uppercase;
+		}
+
+		.learning {
+			background-color: #23894e;
+			animation: fadeOut 3s linear infinite;
+		}
+
+		.coding {
+			background-color: #c26417;
+			animation: slideDown 3s linear infinite;
+		}
+
+		.teaching {
+			background-color: #5a2e98;
+			animation: slideUp 3s linear infinite;
+		}
+
+		@keyframes fadeOut {
+			0% {
+				opacity: 1;
+			}
+
+			33% {
+				opacity: 1;
+			}
+
+			38% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 0;
+			}
+		}
+
+		@keyframes slideDown {
+			0% {
+				top: -45px;
+			}
+
+			33% {
+				top: -45px;
+			}
+
+			38% {
+				top: 0;
+			}
+
+			100% {
+				top: 0;
+			}
+		}
+
+		@keyframes slideUp {
+			0% {
+				top: 45px;
+				transform: translateX(-50%) scale(0.8);
+			}
+
+			66% {
+				top: 45px;
+				transform: translateX(-50%) scale(0.8);
+			}
+
+			71% {
+				top: 0;
+				transform: translateX(-50%) scale(1);
+			}
+
+			100% {
+				top: 0;
+				transform: translateX(-50%) scale(1);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div>START</div>
+
+		<div class="middle-text">
+			<div class="learning">Learning</div>
+			<div class="coding">Coding</div>
+			<div class="teaching">Teaching</div>
+		</div>
+
+		<div>TODAY</div>
+	</div>
+</body>
+
+</html>
