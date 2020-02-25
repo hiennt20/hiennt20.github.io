@@ -3,28 +3,31 @@
 <head>
 	<title>bai thuc hanh 3</title>
 	<style>
-		.box {
-			width: 200px;
-			height: 200px;
-			border-radius: 50%;
-			background: red;
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
-		.box1 {
-			height: 200px;
-			width: 200px;
-			background: red;
+		img {
+			max-width: 200px;
+			opacity: 0.9;
+			animation: box 2s linear infinite ;
 		}
+
+		@keyframes box {
+			0% {transform: scale(1)}
+			25% {transform: scale(0.8)}
+			50% {transform: scale(1)}
+			60% {transform: scale(1.15)}
+			75% {transform: scale(1.3)}
+			100% {transform: scale(1)}
+		}
+		
 	</style>
 </head>
 <body>
-<div class="box">
-	
-</div>
-<div class="box">
-	
-</div>
-<div class="box1">
-	
-</div>
+	<img src="../images/heart.png" alt="">
+
+
 </body>
 </html>

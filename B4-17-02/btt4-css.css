@@ -1,0 +1,67 @@
+body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0;
+			padding: 0;
+		}
+.box {
+	width: 300px;
+	padding: 15px;
+	line-height: 1.5;
+	background: grey;
+	color: #484b4f;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: 'roboto', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+}
+.wrap {
+	position: relative;
+	overflow: hidden;
+	height: 45px;
+}
+.learning, .coding, .teaching {
+			position: absolute;
+			top: 0;
+			left: 30%;
+			color: #fff;
+			text-transform: uppercase;
+			}
+			.learning {
+				background: #23894e;
+				animation: learning 3s linear infinite;
+			}
+			.coding {
+				background: #c26417;
+				animation: coding 3s linear infinite;
+			}
+			.teaching {
+				background: #5a2e98;
+				animation: teaching 3s linear infinite;
+			}
+@keyframes learning {
+	0% {opacity: 1;}
+	33% {opacity: 1;}
+	40% {opacity: 0;}
+	100% {opacity: 0;}
+}
+@keyframes coding {
+	0% {top: 45px;}
+	33% {top: 45px;}
+	40% {top:0;}
+	100% {top:0;}
+}
+@keyframes teaching {
+	0% {top: -45px;}
+	66% {top: -45px;}
+	80% {
+		top: 0;
+		/* transform: translateX(30%) scale(1); */
+	}
+	100% {
+		top: 0;
+	/* transform: translateX(30%) scale(1); */
+}
+}
