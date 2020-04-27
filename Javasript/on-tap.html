@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// bai 1
+		function multiStri(str){
+			let newStr = "";
+			for (let i = 0; i<9; i++) {
+				newStr += str + "-";
+			}
+			return (newStr += str);
+		}
+
+			function multiStri(str){
+			let newStr = str;
+			for (let i = 0; i<9; i++) {
+				newStr += "-" + str;
+			}
+			return newStr;
+		}
+		// bai 2
+		function giaiThua(num){
+			let ketqua = 1;
+			for(let i = 0; i < num; i++) {
+				ketqua *= i + 1;
+			}
+			return ketqua;
+		}
+		// nếu i = 1, thì đk i <= num và ketqua *= i
+		function giaiThua2(numb){
+			let ketQua = 1;
+			for (let i = numb; i >0 ; i--){
+				ketQua *=i;
+			}
+			return ketQua;
+		}
+		// bai 3
+		function chuoiNguoc(str){
+			let ketQua2 = "";
+			for (let i = str.length - 1; i >= 0 ; i--){
+				ketQua2 +=str[i];
+			}
+			return ketQua2;
+
+		}
+	</script>
+
+</body>
+</html>

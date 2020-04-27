@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>căn giữa theo chiều ngang</title>
+	<script>
+		function xinchao (ten) {
+			alert ("xin chao " + ten);
+		}
+
+		// bai tap 1
+		function binhPhuong(x) {
+			return "ket qua la " + x*x ;
+		}
+
+		// bai tap 2
+		function century(year) {
+			var century = year/100;
+			var century = Math.ceil (century);
+			return "the ki la " + century;
+		}
+
+		// cach tuong tu
+		var year;
+		function century(year) {
+			century = year /100;
+			alert( "the ki " + Math.ceil (year/100));
+			// century = Math.ceil(year / 100);
+		}
+
+		function century(year) {
+			return Math.ceil (year/100);
+
+		}
+
+		// bai tap 3
+		function rutGonChuoi(chuoi) {
+			return chuoi.substr(0,10) + "...";
+		}
+
+		// bai tap 4
+		// cach 1
+		function fomatstring(text) {
+			return text.substr(0,1).toUpperCase() + text.substr(1).toLowerCase();
+		}
+		// cach 2
+		function fomatstring(text) {
+			var rezult = text.substr(0,1).toUpperCase() + text.substr(1).toLowerCase();
+			return rezult;
+		}
+		// cach 3
+
+		function fomatstring(text) {
+			var rezult = text.substr(0,1).toUpperCase() + text.substr(1).toLowerCase();
+			document.write(rezult);
+		}
+
+		// cach 4
+		var text = "techmaster";
+		function fomatstring(text) {
+			document.write(text.substr(0,1).toUpperCase() + text.substr(1).toLowerCase());
+		}
+		fomatstring(text);
+		
+		// // bai tap 5
+		// function findMinNumber(array) {
+		// 	return Math.min(array);
+		// }
+			// cach 1
+		var points = [];
+		function findMinNumber() {
+			var min = points.sort(function(a, b){return a-b});
+		 return min[0]; 
+		}
+
+			// cach 2
+		function findMinNumber(points) {
+			var min = points.sort(function(a, b){return a-b});
+		 	return min[0]; 
+		}
+
+
+		// function minArray(arr) {
+		// 	var x = arr.sort (function(a, b){return a-b});
+		// 	return x[0];
+		// }
+
+		// dung Math.min
+		
+		var number = [];
+		function findMinNumber(){
+			return  Math.min(number);
+			
+		}
+		 
+
+
+			// bai tap 6
+
+		function arrangeName(students){
+			var name = students.sort();
+			document.write(name.join("<br>"));
+
+		}
+		
+
+
+		
+		
+
+	</script>
+	<!-- <style>
+		
+		.box {
+			background: green;
+			width: 300px;
+			height: 300px;
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="box">
+		
+	</div>
+
+</body> -->
+</html>
