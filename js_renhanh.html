@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script> 
+
+	// bai 3: tạo mảng chẵn từ mảng có trước, sx giảm dần
+	function mangChan(mang){
+  		let chan = [];
+  		for (let i = 0; i < mang.length; i++){
+  			if (mang[i]%2 == 0){
+   			 chan.push(mang[i]);
+  			}
+  	}
+  return chan.sort();
+
+	}
+
+
+
+	// bài 2: tính giai thưa x, đk x>=0
+	function giaiThua(so){
+  if (so >= 0){
+			let ketqua = 1;
+			for(let i = 0; i < so; i++) {
+				ketqua *= i + 1;
+			}
+			return ketqua;
+  }
+  if (so < 0){
+    return "khong thoa man dieu kien";
+  }
+		}
+		// còn th so là string thì sao ->ketqua tra ve undefined
+
+	// bai 1: xác định a,b có phải là số và so sanh 
+	function bai1(a, b) {
+  if (typeof (a, b) == "number") {
+    if (a - b > 0) {
+      console.log(a);
+    }
+    if (a-b < 0){
+    console.log(b);
+    } 
+  }
+  if (typeof (a,b) != "number"){
+    alert("khong so sanh duoc");
+  }
+ 
+}
+bai1("h",9)
+
+// co su khac nhau ht the nay va thay console.log -> return + go trong console
+</script>
+</body>
+</html>

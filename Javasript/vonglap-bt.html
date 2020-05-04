@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		let arr = ['a','b','c']
+		function sortStudents(students){
+			students.sort();
+			console.log('Trong function',students);
+		}
+		console.log('Ngoai function',arr);
+
+		// bai 6 : in 1->100, chẵn xanh, lẻ đỏ
+		// bai6 chua
+// 		function bai6a() {
+//   for (i = 0; i < 100; i++) {
+//     if (i % 2 === 0) {
+//       document.write(`<span style="color:blue">${i + 1}</span><br>`);
+//     } else {
+//       document.write(`<span style="color:red">${i + 1}</span><br>`);
+//     }
+//   }
+// }
+
+// function bai6b() {
+//   for (let i = 1; i <= 100; i++) {
+//     document.write(`<span style="color:red">${i}</span><br>`);
+//     i++;
+//     document.write(`<span style="color:blue">${i}</span><br>`);
+//   }
+// }
+
+// function bai6c() {
+//   for (let i = 1; i <= 100; i+=2) {
+//     document.write(`<span style="color:red">${i}</span><br>`);
+//     document.write(`<span style="color:blue">${i+1}</span><br>`);
+//   }
+// }
+		function chanLe(num){
+			let Chan = "";
+			let Le = "";
+			for (let i = 0; i <= num ; i += 2){
+				Chan += "<b>"+ i + "</b>";
+			}
+			for (let i = 1; i <= num ; i += 2){
+				Le += "<p>"+ i + "</p>";
+			
+			}
+			document.write(Chan);
+
+			document.write(Le);
+		}
+		
+// 		function chanLe(num){
+// 			let Chan = "";
+// 			let Le = "";
+// 			for (let i = 0; i <= num ; i += 2){
+// 				Chan += '<span style ="color:red">'+ i + '</span>' + '<br/>';
+// 			}
+// 			for (let i = 1; i <= num ; i += 2){
+// 				Le += '<span style ="color:blue">'+ i + '</span>' + "<br/>";
+			
+// 			}
+// 			document.write(Chan);
+
+// 			document.write(Le);
+// 		}
+// num = 10;
+// chanLe(num);
+		// làm sao để thêm màu đây?
+
+		// bài 5: mảng a%2 =mảng 
+	
+		function layDu(arrA){
+			let ketQua5 = [];
+			for (let i = 0; i < arrA.length; i++){
+				ketQua5 += arrA[i]%2;
+			}
+			return ketQua5;
+		}
+
+// function layDu(arrA){
+// 			let ketQua5 = [];
+// 			for (let i = 0; i < arrA.length; i++){
+// 				ketQua5.push(arrA[i]%2);
+// 			}
+// 			console.log(ketQua5);
+// 		}
+
+// arrA =[2,4,3,2];
+// layDu(arrA);
+		// tại sao ketQua5 không trả về theo hình thức của bảng?
+
+		// bai 4: sắp xếp danh sách hs theo abc
+		function sapXep(hs){
+			let ten = hs.sort();
+			let ketQua4 = "";
+			for (let i = 0; i < hs.length; i++) {
+				ketQua4 += "<p>" + (i+1) + "   " + hs[i] + "</p>";
+			}
+			
+			document.write(ketQua4);
+		}
+		// nếu muốn tên hs viết hoa thì làm thế nào?. có cần phải k/b hs là mảng không?
+
+
+		// bai 1
+		function multiStri(str){
+			let newStr = "";
+			for (let i = 0; i<9; i++) {
+				newStr += str + "-";
+			}
+			return (newStr += str);
+		}
+
+			function multiStri(str){
+			let newStr = str;
+			for (let i = 0; i<9; i++) {
+				newStr += "-" + str;
+			}
+			return newStr;
+		}
+		// bai 2
+		function giaiThua(num){
+			let ketqua = 1;
+			for(let i = 0; i < num; i++) {
+				ketqua *= i + 1;
+			}
+			return ketqua;
+		}
+		// nếu i = 1, thì đk i <= num và ketqua *= i
+		function giaiThua2(numb){
+			let ketQua = 1;
+			for (let i = numb; i >0 ; i--){
+				ketQua *=i;
+			}
+			return ketQua;
+		}
+		// bai 3
+		function chuoiNguoc(str){
+			let ketQua2 = "";
+			for (let i = str.length - 1; i >= 0 ; i--){
+				ketQua2 +=str[i];
+			}
+			return ketQua2;
+
+		}
+	</script>
+
+</body>
+</html>
