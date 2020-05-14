@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+// callback function trong slide 7
+function ask(question, yes, no) {
+	if (confirm(question)) { 
+		yes();
+	} else { 
+		no();
+	}
+}
+function showOk() {
+	alert("Bạn đã chọn đồng ý");
+}
+function showCancel() {
+	alert("Bạn đã hủy chọn");
+}
+ask("Bạn đồng ý hay không?", showOk, showCancel);
+
+// bài tập thực hành vòng lặp trong slide 8
+
+// bài 1. Viết hàm truyền vào một mảng các số và tính ra tổng các số đó.
+
+// th2: đề đã cho mảng các số, yêu cầu: tính tổng các số đó.
+function sumArray(arr){
+	for ( let item of arr){
+		let total = arr.reduce((tong, giatri) => tong + giatri);
+	}
+	return total;
+
+}
+
+// th1: hiểu nhầm đề bài, làm phức tạp hóa
+function tongMang(arr) {
+	for (let i = 0; i < arr.length; i++) {
+		if (typeof arr[i] == "number") {
+			total = arr.reduce((sum, value) => sum + value);
+			return total;
+		} else {
+			alert("gia tri trong mang chua phu hop");
+		}
+	}
+
+// let total = 0;
+// co them dong nay duoc khong
+// total = arr.reduce((sum,value) => sum + value);
+// return total;
+}
+// nếu mảng có chứa string thì sao?
+
+// bai da chua
+function sumArray(arr) {
+	let ketqua = 0;
+	for (let x of arr) {
+		ketqua +=x;
+	}
+	return ketqua;
+}
+
+// 2.Cho một mảng các số nguyên bất kỳ, dùng phương thức map() tạo ra một 
+// mảng mới với các số là số dư tương ứng khi chia các số trong mảng cũ cho 2
+
+// th 1: hiểu đúng đề
+function newArray(arr){
+	surplus = arr.map(number => number % 2);
+	return surplus;
+	
+}
+
+// th2: làm phức tạp để bài
+function bai2(arr){
+	for (let i = 0; i < arr.length; i++){
+		if ( typeof arr[i] == "number" && arr[i] - Math.round(arr[i]) == 0){
+			let dumang = arr.map(so => so % 2);
+// alert ('mang hop le');
+return dumang;
+
+}else{
+	alert('mang khong hop le');
+	break;
+}
+}
+}
+// mảng có string bên trong vẫn tính được?
+
+// 3 . Dùng phương thức filter() lọc ra các số chẵn trong một mảng nhiều số bất kỳ.
+
+// th1: hiểu đúng đề
+function evenNumbers(arr) {
+  // for (let item of arr) { 
+  // tại sao không có dòng này vẫn chạy đúng? chẳng lẽ lại là thừa 
+  newarr = arr.filter((item) => item % 2 != 0);
+  return newarr; 
+    // để return ở đây hay ở dưới?
+  // }
+  // return newarr;
+}
+
+// th2: làm phức tạp đề bài
+function bai3(arr) {
+	for (let i = 0; i < arr.length; i++) {
+		if (typeof arr[i] == "number" && arr[i] % 2 == 0) {
+// alert ('mang hop le');
+
+let chan = arr.filter(function (so) {
+	return so;
+});
+} else {
+	alert("mang khong co so chan");
+	break;
+}
+}
+}
+// const words = ['apple', 'microsoft', 'samsung', 'intel'];
+// const longWords = words.filter(word => word.length > 5);
+// function bai3(arr) {
+//   let chan = arr.filter(so => so % 2 = 0);
+//   return chan;
+// }
+
+// 4. Cho một mảng các chuỗi là tên các học viên. Viết hàm lọc ra những học viên 
+// có tên bắt đầu bằng chữ H (không phân biệt hoa thường).
+function filterName(arr) {
+	let newArr = arr.filter((name) => name[0] == "h" || name[0] == "H");
+	return newArr;
+}
+
+
+
+</script>
+
+</body>
+</html>
