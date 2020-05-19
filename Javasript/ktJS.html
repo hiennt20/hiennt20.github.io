@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		function checkDup(arry) {
+  let counts = [];
+  for (let i = 0; i <= arry.length; i++) {
+    if (counts[arry[i]] === undefined) {
+    	debugger;
+      counts[arry[i]] = 1;
+    } else return true;
+  }
+  return false;
+}
+	</script>
+
+</body>
+</html>

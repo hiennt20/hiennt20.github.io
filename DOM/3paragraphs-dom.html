@@ -3,9 +3,22 @@
 <head>
 	<meta charset="utf-8">
 	<title>demo DOM</title>
-	<h1>Demo Document Object Model</h1>
+	<style>
+		h1{
+			font-size: 25px
+		}
+		body{
+			font-family: 'Roboto', sans-serif;
+			font-size: 16px;
+			color: #464646;
+			overflow-y: scroll;
+			background-color: #f4f7fa;
+		}
+	</style>
+	
 </head>
 <body>	
+	<h1>Demo Document Object Model</h1>
 	<p id = "p1">The HTML DOM document object is the owner of all other objects in your web page.</p>
 	
 	<p id = "p2">The HTML DOM Document Object
@@ -21,6 +34,52 @@
 		The first HTML DOM Level 1 (1998), defined 11 HTML objects, object collections, and properties. These are still valid in HTML5.
 		<br/>
 	Later, in HTML DOM Level 3, more objects, collections, and properties were added.</p>
+	<script>
+		// bài 1
+		function changeColor(){
+			document.getElementById("p1").style.color = "green";
+			document.getElementById("p2").style.color = "yellow";
+			document.getElementById("p3").style.color = "red";
+		}
+		// bài 2
+		function changeBgColor(color){
+			
+			document.querySelector("body").style.backgroundColor = color;
+		}
+		// bài 3
+		paragraph1 = document.getElementById("p1");
+		paragraph2 = document.getElementById("p2");
+		function copyContent(paragraph1, paragraph2){
+			paragraph1.innerText = paragraph2.innerText;
+
+		}
+		// bai 4
+		function changeFontSize(x){
+			let arr = document.getElementsByTagName("p");
+			for (let i = 0; i < arr.length; i++){
+				arr[i].style.fontSize = x + "px";
+			}
+		}
+		// bai 5
+		// bài của anh Vũ mà mình cũng chẳng hiểu luôn 
+		function increaseFontSize(paragraph){
+			// let nowFontSize = changeFontSize();
+			// sau khi đã dùng hàm changeFontSize
+			function increaseFontSize(paragraph) {
+  // increaseFontSize(p1)
+  var p = paragraph.style.fontSize; // Lấy kích cỡ font sau khi dùng hàm changeFontSize ở trên
+  var noneDV = p.slice(-2); // Lấy riêng chuỗi đơn vị của cỡ font,  ở đây là tách chuỗi "px"
+  var size = Number(p.replace(noneDV, "")); // Chuyển chuỗi sau khi bỏ đơn vị thành kiểu sổ
+  size = size + 1;
+  if (size <= 30) {
+  	paragraph.style.fontSize = size + "px";
+  } else {
+  	alert("Cỡ chữ không vượt quá 30px");
+  }
+}
+
+}
+</script>
 
 </body>
 </html>
