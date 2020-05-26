@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Hien CalculatorJquery</title>
+	<style>
+		body {
+			background-color: #7c779924;
+			display: flex;
+			/*align-items: center;*/
+			justify-content: center;
+			margin-top: 50px;
+		}
+		* {
+			box-sizing: border-box;
+			font-family: "Bree Serif";
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.cover {
+			width: 400px;
+			height: 400px;
+			background-color: white;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		#display-layout {
+			width: 400px;
+			height: 100px;
+			background-color: #7785992b;
+			border: 1px solid #ff792294;
+    		margin-bottom: 10px;
+		}
+		
+		#display-layout input {
+			width: 100%;
+			height: 100%;
+			padding-right: 10px;
+			text-align: right;
+			background-color: #7785992b;
+		}
+		
+		.calculate {
+			width: 400px;
+			height: 300px;
+			background-color: white;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-gap: 5px 5px;
+		}
+
+		button {
+			border-radius: 10px;
+			border-color: #ff792294;
+			cursor: pointer;
+			outline: none;
+			transition: 0.2s;
+		}
+		button:active{
+				border-radius: 25px; 
+		}
+		.operator-button {
+			background-color: #777b996e;
+		}
+		
+		#delall,
+		#del,
+		#square,
+		#reverseSquare {
+			background-color: #777b996e;
+		}
+		#equalButton{
+				background-color: #8bc34a8a;
+			}
+
+
+	</style>
+</head>
+<body>
+	<div class="cover">
+		<!-- <div id="rezult"></div> -->
+		<div id="display-layout">
+			<input type="text" id="display">
+		</div>
+		<div class="calculate">
+			<button id="del">Del</button>
+			<button id="square">x&sup2;</button>
+			<button id="reverseSquare">&radic;x</button>
+			<button id="delall">AC</button>
+			<button class="number-button">7</button>
+			<button class="number-button">8</button>
+			<button class="number-button">9</button>
+			<button class="operator-button">+</button>
+			<button class="number-button">4</button>
+			<button class="number-button">5</button>
+			<button class="number-button">6</button>
+			<button class="operator-button">-</button>
+			<button class="number-button">1</button>
+			<button class="number-button">2</button>
+			<button class="number-button">3</button>
+			<button class="operator-button">&#215;</button>
+			<button class="number-button">0</button>
+			<button id="comma">.</button>
+			<button id="equalButton">=</button>
+			<button class="operator-button">&#247;</button>
+
+		</div>
+	</div>
+	<div>
+
+	<script src="jquery-3.5.1.min.js">
+		let currentDisplay = $("#display");
+	let numberButtons = $(".number-button");
+// gán sự kiện khi click vào nút thì lấy nội dung text cộng vào phần hiện thị
+for (let i = 0; i < numberButtons.length; i++) {
+	numberButtons[i].addEventListener("click", function () {
+		currentDisplay.value += numberButtons[i].innerText;
+	});
+}
+		
+
+// thêm phép tính vào display
+// let operatorButtons = $(".operator-button");
+// for (let i = 0; i < operatorButtons.length; i++) {
+// 	operatorButtons[i].addEventListener("click", function () {
+// 		currentDisplay.value += operatorButtons[i].innerText;
+// 	});
+// }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Hien Calculator</title>
+	<style>
+		body {
+			background-color: #7c779924;
+			display: flex;
+			/*align-items: center;*/
+			justify-content: center;
+			margin-top: 50px;
+		}
+		* {
+			box-sizing: border-box;
+			font-family: "Bree Serif";
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.cover {
+			width: 400px;
+			height: 400px;
+			background-color: white;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		#display-layout {
+			width: 400px;
+			height: 100px;
+			/*background-color: #7c779924;*/
+			border: 1px solid #ff792294;
+    		margin-bottom: 10px;
+		}
+		
+		#display-layout input {
+			width: 100%;
+			height: 100%;
+			text-align: right;
+			background-color: #7c779924;
+			padding-right: 10px;
+			
+
+		}
+		
+
+			.calculate{
+				width: 400px;
+				height: 300px;
+				background-color: white;
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+				grid-gap: 5px 5px;
+				
+			}
+
+			button {
+				/*border: 3px solid #ff792294*/
+				border-radius: 10px;
+				border-color: #ff792294;
+				cursor: pointer;
+				outline: none;
+				transition: 0.3s;
+			}
+			button:active{
+				border-radius: 25px; 
+			}
+			.operator-button {
+				background-color: #777b996e;
+			}
+			
+			#delall,
+			#del,
+			#square,
+			#reverseSquare {
+				background-color: #777b996e;
+			}
+			#equalButton{
+				background-color: #8bc34a8a;
+			}
+
+
+		</style>
+	</head>
+	<body>
+		<div class="cover">
+			<!-- <div id="rezult"></div> -->
+			<div id="display-layout">
+				<input type="text" id="display">
+			</div>
+			<div class="calculate">
+				<button id="del">Del</button>
+				<button id="square">x&sup2;</button>
+				<button id="reverseSquare">&radic;x</button>
+				<button id="delall">AC</button>
+				<button class="number-button">7</button>
+				<button class="number-button">8</button>
+				<button class="number-button">9</button>
+				<button class="operator-button">+</button>
+				<button class="number-button">4</button>
+				<button class="number-button">5</button>
+				<button class="number-button">6</button>
+				<button class="operator-button">-</button>
+				<button class="number-button">1</button>
+				<button class="number-button">2</button>
+				<button class="number-button">3</button>
+				<button class="operator-button">&#215;</button>
+				<button class="number-button">0</button>
+				<button id="comma">.</button>
+				<button id="equalButton">=</button>
+				<button class="operator-button">&#247;</button>
+
+			</div>
+		</div>
+
+		<script>
+	// hiển thị số vào display khi bấm numberButtons
+	let currentDisplay = document.getElementById("display");
+	let numberButtons = document.querySelectorAll(".number-button");
+// gán sự kiện khi click vào nút thì lấy nội dung text cộng vào phần hiện thị
+for (let i = 0; i < numberButtons.length; i++) {
+	numberButtons[i].addEventListener("click", function () {
+		currentDisplay.value += numberButtons[i].innerText;
+	});
+}
+
+// thêm phép tính vào display
+let operatorButtons = document.querySelectorAll(".operator-button");
+for (let i = 0; i < operatorButtons.length; i++) {
+	operatorButtons[i].addEventListener("click", function () {
+		currentDisplay.value += operatorButtons[i].innerText;
+	});
+}
+
+// them dau phay vao man hinh
+let comma = document.getElementById("comma");
+comma.addEventListener("click", function(){
+	currentDisplay.value += comma.innerText;
+})
+
+// thêm sự kiện vào dấu =
+let equal = document.getElementById("equalButton");
+equal.addEventListener("click", function () {
+	let str = "";
+  // for (let i= 0; i < currentDisplay.value.length; i++ ){
+  //   if(currentDisplay.value[i] = "×"){
+  	str = currentDisplay.value.replace(/×/g, "*");
+
+      // str = currentDisplay.value.replace("÷", "/");
+      str = str.replace(/÷/g, "/");
+      // lenh else bi loi, tai sao co chu
+
+
+//   }
+currentDisplay.value = eval(str);
+});
+
+// thêm sự kiện vào nút AC
+document.getElementById("delall").addEventListener("click", function () {
+	currentDisplay.value = "";
+});
+
+// thêm sự kiện vào nút Del
+document.getElementById("del").addEventListener("click", function () {
+	currentDisplay.value = currentDisplay.value.slice(0, currentDisplay.value.length -1);
+});
+
+// thêm sự kiện vào nút bình phương
+document.getElementById("square").addEventListener("click", function () {
+	currentDisplay.value = Number( currentDisplay.value) *Number( currentDisplay.value);
+});
+
+// thêm sự kiện vào nút căn bậc 2
+// document.getElementById("square").addEventListener("click", function () {
+//   currentDisplay.value = 
+// });
+
+
+
+// note: để replace được nhiều dùng, .replace(/blue/g, "red")
+// g: global: 
+// i: insensitive: không phân biệt hoa thường
+	// &nbsp; khoang trang
+</script>
+</body>
+</html>
