@@ -5,24 +5,65 @@
 	<style>
 		body {
 			background-image:url("https://2.bp.blogspot.com/-kWzmRf5LKrQ/VtIo1VL8FII/AAAAAAAABRM/YL8rUnyYpJM/s1600/chiem-nguong-nhung-anh-dep-thien-nhien-me-dam-long-nguoi-16.jpg");
+			
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			
 		}
-		h1 {
+		/*h1 {
 			
 			font-size: 25px;
-			color: #FFC107;;
+			color: #FFC107;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			căn h1 ra giữa
+			position: absolute;
+			left:50%;
+			top:50%;
+			transform: translate(-50%, -50%);
+		}*/
+		#rezult {
+			/*position: absolute;
+			left:50%;
+			top:50%;
+			transform: translate(-50%, -50%);*/
+			height: 400px;
+			width: 400px;
+			font-size: 25px;
+			color: #FFC107;
+			
+			/*position: absolute;
+			left:50%;
+			top:50%;
+			transform: translate(-50%, -50%);*/
 		}
 	</style>
 </head>
 <body>
-<h1>
-Bạn đã đăng kí thành công
-	<br/>
-	Cảm ơn bạn!
+	<
+	<div id="rezult">
+		<h1>
+		Bạn đã đăng kí thành công
+		<br/>
+		Cảm ơn bạn!
+	</h1>
+	</div>
+	
+	<script>
 
-</h1>
+		let link = window.location.href
+		let alink = link.substring(link.indexOf("?") + 1)
+		let cutString = decodeURIComponent(alink).split("&")
+		
+		for (let i = 0; i < cutString.length; i++){
+			let rezult = cutString[i].replace("=", ":  ") + "<br/>"
+			// string +=rezult;
+			document.getElementById("rezult").innerHTML += rezult;
+		}
+		document.getElementById("rezult").style.color ="#FFC107"
+		document.getElementById("rezult").style.fontSize ="15px"
+	</script>
+
 </body>
 </html>
