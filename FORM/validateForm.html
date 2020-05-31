@@ -1,35 +1,55 @@
 <html>
 
 <head>
-  <title>Register Form - version2</title>
+  <title>Validate Form</title>
   <meta charset="utf-8" />
   <style>
     h1 {
       font-size: 20px;
-      color: #FFC107;
+      color: #f43636;
     }
     body {
-      background-image:url("https://2.bp.blogspot.com/-kWzmRf5LKrQ/VtIo1VL8FII/AAAAAAAABRM/YL8rUnyYpJM/s1600/chiem-nguong-nhung-anh-dep-thien-nhien-me-dam-long-nguoi-16.jpg");
+      background-image:url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/28689e64120315.5ac7733601504.png");
       display:flex;
       justify-content: center;
       align-items: center;
     }
+    .cover{
+      width: 400px;
+      padding-left: 20px;
+      border: 5px solid orange;
+      box-shadow: -10px -10px #ff00bbad, 10px 10px #1b00ff85;
+      background-color: white;
+      opacity: 0.8;
+    }
+    span {
+      font-size: 25px;
+      color: red;
 
+    }
 
-    .customerUse {
-      background-color: lightblue; 
+    /*input{
+     border: 2px solid orange;*/
+     /*} sao lai khong duoc nhi*/
+     .customerUse {
+      background-color: white; 
       padding: 3px 3px 3px 5px;
-      border: 1px solid grey;
+      border: 2px solid grey;
       width: 300px;
+
     }
     #login {
-      background-color: #eee;
+      background-color: #FF5722;
       font-size: 20px;
-      color: #FF5722;
+      color: white;
       border: 2px solid;
       width: 200px;
       cursor: pointer;
-}
+      outline: none;
+    }
+    #login:hover {
+      border-radius: 25px;
+    }
   </style>
 </head>
 
@@ -38,18 +58,28 @@
     <h1>Đăng kí thành viên</h1>
     <form action="index.html" id ="form-register">
       <input class="customerUse name" type="text" name="name" placeholder="Ho Ten" />
+      <span id="error"></span>
       <br />
       <br />
       <input class="customerUse email" type="text" name="email" placeholder="Email@gmail.com" />
+      <span id="error"></span>
       <br />
       <br />
-      <input class="customerUse" id="password" type="password" name="password" placeholder="Mật khẩu" /><br />
+      <input class="customerUse" id="password" type="password" name="password" placeholder="Mật khẩu" />
+      <span id="error"></span>
       <br />
-      <input class="customerUse" id="confirm" type="password" name="confirm" placeholder="Xác nhận mật khẩu" /><br />
       <br />
-      <input class="customerUse" type="text" name="address" placeholder="Địa chỉ" /><br />
+      <input class="customerUse" id="confirm" type="password" name="confirm" placeholder="Xác nhận mật khẩu" />
+      <span id="error"></span>
       <br />
-      <input class="customerUse" type="text" name="phoneNumber" placeholder="Số điện thoại" /><br />
+      <br />
+      <input class="customerUse" id="address" type="text" name="address" placeholder="Địa chỉ" />
+      <span id="error"></span>
+      <br />
+      <br />
+      <input class="customerUse" id="phoneNumber" type="text" name="phoneNumber" placeholder="Số điện thoại" />
+      <span id="error"></span>
+      <br />
       <br />
       <select id="day" name="day">
       </select>
@@ -63,19 +93,20 @@
       <input type="radio" name="gender" id="female"  value="female"/><label for="female">Nữ</label>
       <br />
       <br />
-      <input id="login" type="submit" value="Đăng kí" />
+      <input id="login" type="submit" value="Đăng kí"/>
 
     </form>
   </div>
   <script>
-    let day = `<option value ="">Ngày</option>`;
-    function chooseDay() {     
-     for (let i = 1; i <=31; i++) {            
-       day += `<option value ="${i}">${i}</option>`;
-     }         
-   }
-   chooseDay();
-   document.getElementById("day").innerHTML = day;
+  // them ngay sinh
+  let day = `<option value ="">Ngày</option>`;
+  function chooseDay() {     
+   for (let i = 1; i <=31; i++) {            
+     day += `<option value ="${i}">${i}</option>`;
+   }         
+ }
+ chooseDay();
+ document.getElementById("day").innerHTML = day;
 
 // thêm tháng sinh
 let month = `<option value="">Tháng</option>`;
@@ -97,10 +128,17 @@ function chooseYear(){
 chooseYear();
 document.getElementById("year").innerHTML = year;
 
-// hiệu lực của mật khẩu
-// y/c: không có khoảng trắng
-// có ít nhất 1 số
-/*function checkPassword(str) {
+/*validate for form
+function mySubmit(){
+  let hiensubmit = document.getElementById("form-register");
+  let isValid;
+
+}
+
+hiệu lực của mật khẩu
+y/c: không có khoảng trắng
+có ít nhất 1 số
+function checkPassword(str) {
   let space = str.indexOf(" ");
   let rezult;
   for (let i = 0; i < str.length; i++) {
@@ -112,15 +150,59 @@ document.getElementById("year").innerHTML = year;
   return rezult;
 }
 document.getElementById("password").innerHTML = checkPassword();*/
-
-// kiểm tra validat
-
 </script>
-<script src="jquery-3.5.1.min.js"></script>
+<script src="../DOM/jquery-3.5.1.min.js"></script>
 <script>
+
   $("#form-register").on('submit', function(){
-  console.log('form-submit');
-  return false;
+    console.log('form-submit');
+    let isValid = true;
+    if($(".name").val().trim() ==''){
+      $(".name").next("span").text('!');
+      isValid = false;
+    }else{
+     $(".name").next("span").text('');
+   }
+
+  // if($(".email").val().trim() =='')
+  if($(".email").val().match(/[\w-]+@([\w-]+\.)+[\w-]+/) == null){
+   $(".email").next("span").text('!');
+   isValid = false;
+ }else{
+  $(".email").next("span").text('');
+}
+
+if($("#password").val() ==''){
+  $("#password").next("span").text('!');
+  isValid = false;
+}else{
+  $("#password").next("span").text('');
+}
+
+if($("#confirm").val() =='' || $("#confirm").val() != $("#password").val()){
+  $("#confirm").next("span").text('!');
+  isValid = false;
+}else{
+  $("#confirm").next("span").text('');
+}
+
+if($("#address").val().trim() ==''){
+  $("#address").next("span").text('!');
+  isValid = false;
+}else{
+  $("#address").next("span").text('');
+}
+
+if($("#phoneNumber").val().trim() =='' ||
+  Number.isInteger($("#phoneNumber").val())){
+  $("#phoneNumber").next("span").text('!');
+isValid = false;
+}else{
+  $("#phoneNumber").next("span").text('');
+}
+
+return isValid;
+
 })
 </script>
 </body>

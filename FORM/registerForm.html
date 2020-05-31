@@ -8,7 +8,7 @@
 <body>
 	<div>
 		<h1>Đăng kí thành viên</h1>
-		<form action="index.html" >
+		<form action="index.html" id="form-register" >
 			<input type="text" name="name" placeholder="Ho Ten" />
 			<br/>
 			<br />
@@ -20,13 +20,13 @@
 			<select id="day" name="day"></select>
 			<select id="month" name="month"></select>
 			<select id="year" name="year">
-				<!-- <option>Chọn năm sinh...</option>
+				<option>Chọn năm sinh...</option>
 				<option value="năm 1990">1990</option>
 				<option value="năm 1991">1991</option>
 				<option value="năm 1992">1992</option>
 				<option value="năm 1993">1993</option>
 				<option value="năm 1994">1994</option>
-				<option value="năm 1995">1995</option> -->
+				<option value="năm 1995">1995</option>
 			</select>
 			<br/>
 			<br/>
@@ -38,7 +38,14 @@
 
 		</form>
 	</div>
-	<script>
+	<script src="../DOM/jquery-3.5.1.min.js"></script>
+<script>
+  $("#form-register").on('submit', function(){
+  console.log('form-submit');
+  return false;
+})
+</script>
+	<!-- <script>
 		// thêm ngày vào day option
 		let day = `<option value ="">Ngày</option>`;
 		function chooseDay() {     
@@ -68,7 +75,7 @@ function chooseYear(){
 }
 chooseYear();
 document.getElementById("year").innerHTML = year;
-</script>
+</script> -->
 </body>
 
 </html>
