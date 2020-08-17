@@ -1,0 +1,159 @@
+body{
+    color: black;
+}
+* {box-sizing:border-box;}
+a{
+    text-decoration: none;
+}
+.first-section{
+    width: 100%;
+    height: 612px;
+    background-color:orange;
+
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.slogan{
+    margin-top: 40px;
+    margin-left: 65px;
+}
+.main-menu{
+    width: 493px;
+    height: 44px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    margin-right: 50px;
+    
+}
+.sign-up{
+    width: 110px;
+    height: 44px;
+    background-color:olive;
+   
+}
+.menu-search{
+    width: 680px;
+    height: 580px;
+    margin: auto;
+    margin-top: 210px;
+}
+.first-section h2{
+    font-size: 54px;
+    
+}
+.menu-search p{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+   
+}
+.main-search{
+    margin-top: 18px;
+    margin-bottom: 50px;
+    width: 590px;
+    height: 56px;
+    background-color: teal;
+}
+.search{
+    width: 50%;
+    height: 55px;
+}
+.postcode{
+    width: 25%;
+    height: 55px;
+}
+.main-search button{
+    width: 25%;
+    height: 55px;
+}
+/* phần 2 */
+.second-section{
+    /* background-color: chocolate; */
+    width: 1280px;
+    height: 760px;
+    margin: auto;
+    margin-top: 300px;
+    
+}
+h2{
+    font-size: 30px;
+    text-align: center;
+}
+p{
+    font-size: 20px;
+    text-align: center;
+}
+.car-series{
+    text-transform: uppercase;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 32px;
+    column-gap: 24px;
+    margin-top: 60px;
+}
+.image-car{
+    width: 300px;
+    height: 220px;
+    background-color: white;
+}
+.detail-car{
+    width: 300px;
+    height: 200px;
+    background-color: darkgray;
+}
+.view-button{
+    width: 228px;
+    height: 60px;
+    background-color: orange;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* phần 3 */
+.third-section{
+    width: 1280px;
+    height: 450px;
+    margin: auto;
+    margin-top: 84px;
+    background-color: peachpuff;
+}
+.buying-tips{
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+
+}
+
+/* phần cuối */
+.before-footer{
+    width: 100%;
+    height: 350px;
+    background-color: orange;
+}
+.footer{
+    width: 100%;
+    height: 100px;
+    background-color: lightslategray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-footer{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 85px;
+}
+.slogan-footer{
+    margin-left: 85px;
+}
