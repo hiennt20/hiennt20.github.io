@@ -23,6 +23,52 @@ function tongSoNguyenNamGiu(a, b) {
 }
 
 // 3. kiểm tra một số có phải là số nguyên tố hay không
-function soNguyenTo(a){
-    
-}
+// function soNguyenTo(a){
+//     let ketqua = "true";
+//     if (a < 1){
+//       ketqua = "false";
+//     }else{
+//         for( let i = 2; i <= Math.sqrt(a); i++){
+//             if(a%i == 0){
+//                 ketqua = "false";
+//                 return ketqua;
+//             }esle{
+//                 return ketqua;
+//             }
+//         }
+
+//     }
+//     return ketqua;
+// } 
+// cách thông thường
+function soNguyento(a) {
+    let soNguyen = Number.isInteger(a);
+    let ketqua = "true";
+    if (soNguyen != true || (soNguyen == true && a <= 1)) {
+      ketqua = "false";
+    } else {
+      for (let i = 2; i <= a - 1; i++) {
+        if (a % i == 0) {
+          return (ketqua = "false");
+        }
+      }
+      return ketqua;
+    }
+    return ketqua;
+  }
+// cách theo căn bậc hai
+  function soNguyento(a) {
+    let soNguyen = Number.isInteger(a);
+    let ketqua = "true";
+    if (soNguyen != true || (soNguyen == true && a <= 1)) {
+      ketqua = "false";
+    } else {
+      for (let i = 2; i <= Math.sqrt(a); i++) {
+        if (a % i == 0) {
+          return (ketqua = "false");
+        }
+      }
+      return ketqua;
+    }
+    return ketqua;
+  }
