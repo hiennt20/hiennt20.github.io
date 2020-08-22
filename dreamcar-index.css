@@ -34,6 +34,9 @@ a{
     width: 110px;
     height: 44px;
     background-color:olive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
    
 }
 .menu-search{
@@ -55,9 +58,10 @@ a{
 .main-search{
     margin-top: 18px;
     margin-bottom: 50px;
-    width: 590px;
+    max-width: 590px;
     height: 56px;
     background-color: teal;
+    display:flex;
 }
 .search{
     width: 50%;
@@ -156,4 +160,9 @@ p{
 }
 .slogan-footer{
     margin-left: 85px;
+}
+.sign-me{
+    max-width: 590px;
+    height: 56px;
+    ba
 }

@@ -1,90 +1,92 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title></title>
 </head>
+
 <body>
-<script>
-	// bai tap 4: sap xep ten hs
-	var students = [];
-	function arrangeName(students){
+	<script>
+		// bai tap 4: sap xep ten hs
+		var students = [];
+		function arrangeName(students) {
 			var name = students.sort();
 
 			for (i = 0; i < students.length; i++)
 
-			 document.write("<p>" + (i + 1) +" " + students[i] +"</p>");
+				document.write("<p>" + (i + 1) + " " + students[i] + "</p>");
 		}
 
 
-	// bài tập 3: viết chuỗi ngược
-	var arr = [];
-	function reverseString(arr) {
-		var rezult = "";
-		for (var i = arr.length; i >= 0; i--) {
-			rezult += arr[i];
-		}
+		// bài tập 3: viết chuỗi ngược
+		var arr = [];
+		function reverseString(arr) {
+			var rezult = "";
+			for (var i = arr.length; i >= 0; i--) {
+				rezult += arr[i];
+			}
 
 			document.write(rezult);
-	} 
-	// lỗi: rezult have undefine and usereturn khong working
+		}
+		// lỗi: rezult have undefine and usereturn khong working
 
-	// bài tập 1: theo thầy giáo đã sửa
-// function hienLoop(s, c) {
-// 	var rs = s;
-// 	for (var i = 0; i < 10; i++) 
-// 		rs += c + s;
-// 	document.write(rs);
-// }
-// phien ban lam dung de bai
-// function hNumber(number) {
-// 	if (number >= 0)
-// 	document.write(number +":" + "la so duong");
-// else
-// 	document.write(number +":" + "la so am");
+		// bài tập 1: theo thầy giáo đã sửa
+		// function hienLoop(s, c) {
+		// 	var rs = s;
+		// 	for (var i = 0; i < 10; i++) 
+		// 		rs += c + s;
+		// 	document.write(rs);
+		// }
+		// phien ban lam dung de bai
+		// function hNumber(number) {
+		// 	if (number >= 0)
+		// 	document.write(number +":" + "la so duong");
+		// else
+		// 	document.write(number +":" + "la so am");
 
-// }
+		// }
 
-// phien ban
-// function hNumber(a) {
-// 	var s1 = ": so nay la";
-// 	if (a<= 0)
-// 		s2 ="khong";
-// 	else
-// 		s2 = "";
-// 	var s3 = "duong";
-// 	if (number >= 0)
-// 	document.write(number +);
-// else
-// 	document.write(number +);
+		// phien ban
+		// function hNumber(a) {
+		// 	var s1 = ": so nay la";
+		// 	if (a<= 0)
+		// 		s2 ="khong";
+		// 	else
+		// 		s2 = "";
+		// 	var s3 = "duong";
+		// 	if (number >= 0)
+		// 	document.write(number +);
+		// else
+		// 	document.write(number +);
 
-// }
-// bai tap 2: tính giai thừa cách hiểu khác
-function hLoop(number){
-	for (a = 1; a <= number; a ++) {
-	n = number*a;
-	return n; 
-}
-}
-// cách 3: ? tại sao bỏ {} ở for đi lại cho kết quả đúng, và ngược lại
+		// }
+		// bai tap 2: tính giai thừa cách hiểu khác
+		function hLoop(number) {
+			for (a = 1; a <= number; a++) {
+				n = number * a;
+				return n;
+			}
+		}
+		// cách 3: ? tại sao bỏ {} ở for đi lại cho kết quả đúng, và ngược lại
 
-function hFactorial(number) {
-	for (var i = number - 1; i >= 1; i --) 
-		number = number*i;
-		return number;
-}
-function hien( ) {
-	for(var i = 3; i < 10; i+=3 )
-	document.write(i*2 + "<p>em hua</p>")
-}
+		function hFactorial(number) {
+			for (var i = number - 1; i >= 1; i--)
+				number = number * i;
+			return number;
+		}
+		function hien() {
+			for (var i = 3; i < 10; i += 3)
+				document.write(i * 2 + "<p>em hua</p>")
+		}
 
 
-// bai tap 2:  tinh giai thua
-function hLoop(number) {
-	for (a = 1; number >= 1; number --) {
-		a = a*number;
-	}
-	return a; 
-}
+		// bai tap 2:  tinh giai thua
+		function hLoop(number) {
+			for (a = 1; number >= 1; number--) {
+				a = a * number;
+			}
+			return a;
+		}
 
 
 // bài tập 1: 
@@ -110,4 +112,5 @@ function hLoop(number) {
 		// }
 	</script>
 </body>
+
 </html>
