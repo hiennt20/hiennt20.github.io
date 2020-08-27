@@ -1,6 +1,8 @@
 *{
+    /* box-sizing: border-box; */
     margin: 0;
     padding: 0;
+    
 }
 body{
     font-size: 20px;
@@ -36,6 +38,13 @@ header {
     width: fit-content;
     background: #9E9E9E;
 }
+.item-image{
+    width: 200px;
+    height: 250px;
+    border-style: solid;
+    border-color: red;
+    margin-top: 40px;
+}
 .item-image>a>img{
    max-width: 200px;
 }
@@ -43,4 +52,5 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
